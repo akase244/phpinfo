@@ -40,7 +40,6 @@ class PhpInfo
                 break;
             default:
                 return $this->phpinfos[$directive][$primary];
-                return $this->phpinfos[$directive];
                 break;
         }
     }
