@@ -46,8 +46,8 @@ class PhpInfo
 }
 
 $pInfo = new PhpInfo();
-echo var_export($pInfo->find(), 1).PHP_EOL;
-echo var_export($pInfo->find('all'), 1).PHP_EOL;
+echo var_export($pInfo->find(), 1).PHP_EOL; // => all configuration [default]
+echo var_export($pInfo->find('all'), 1).PHP_EOL; // => all configuration [default]
 echo var_export($pInfo->find('zend.detect_unicode', 'local'), 1).PHP_EOL; // => 'On'
 echo var_export($pInfo->find('post_max_size', 'master'), 1).PHP_EOL; // => '8M'
 echo var_export($pInfo->find('max_execution_time', 'local'), 1).PHP_EOL; // '0'
