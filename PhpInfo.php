@@ -48,11 +48,11 @@ class PhpInfo
 $pInfo = new PhpInfo();
 echo var_export($pInfo->find(), 1).PHP_EOL;
 echo var_export($pInfo->find('all'), 1).PHP_EOL;
-echo var_export($pInfo->find('zend.detect_unicode', 'local'), 1).PHP_EOL;
-echo var_export($pInfo->find('post_max_size', 'master'), 1).PHP_EOL;
-echo var_export($pInfo->find('max_execution_time', 'local'), 1).PHP_EOL;
-echo var_export($pInfo->find('memory_limit', 'local'), 1).PHP_EOL;
-echo var_export($pInfo->find('upload_max_filesize', 'local'), 1).PHP_EOL;
-echo var_export($pInfo->find('variables_order', 'local'), 1).PHP_EOL;
-echo var_export($pInfo->find('post_max_size', 'local'), 1).PHP_EOL;
-echo var_export($pInfo->find('include_path', 'local'), 1).PHP_EOL;
+echo var_export($pInfo->find('zend.detect_unicode', 'local'), 1).PHP_EOL; // => 'On'
+echo var_export($pInfo->find('post_max_size', 'master'), 1).PHP_EOL; // => '8M'
+echo var_export($pInfo->find('max_execution_time', 'local'), 1).PHP_EOL; // '0'
+echo var_export($pInfo->find('memory_limit', 'local'), 1).PHP_EOL; // '128M'
+echo var_export($pInfo->find('upload_max_filesize', 'local'), 1).PHP_EOL; // => '2M'
+echo var_export($pInfo->find('variables_order', 'local'), 1).PHP_EOL; // => 'GPCS'
+echo var_export($pInfo->find('post_max_size', 'local'), 1).PHP_EOL; // => '8M'
+echo var_export($pInfo->find('include_path', 'local'), 1).PHP_EOL; // => '.:/usr/local/lib/php'
