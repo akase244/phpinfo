@@ -23,7 +23,6 @@ class PhpInfo
         foreach ($unsets as $key => $val) {
             unset($phpinfo[$val]);
         }
-        $phpinfo = array_merge($phpinfo);
         foreach ($phpinfo as $key => $val) {
             $info = explode('=>', $val);
             $this->phpinfos[trim($info[0])]['local'] = trim($info[1]);
